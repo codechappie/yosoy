@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>YoSoY - Inicio</title>
+        <title>YosoY - Inicio</title>
         <meta name="description" content="YoSoY es una página en la que podrás crear una curriculim online." />
         <link rel="icon" href="/favicon.ico" />
       </Head>

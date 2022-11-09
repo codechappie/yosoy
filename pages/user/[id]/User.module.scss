@@ -1,3 +1,291 @@
-.re{
-    background-color: green;
+.container__fluid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 100vh;
+  position: relative;
+}
+
+.main__information {
+  width: 25%;
+  margin-left: 20%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  position: fixed;
+  height: 100vh;
+
+  &_container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .header {
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .presentacion {
+        h1 {
+          font-size: 3rem;
+          line-height: 4rem;
+          font-weight: 600;
+        }
+        p {
+          margin-top: 20px;
+          font-size: 15px;
+          line-height: 1.5em;
+        }
+      }
+      .navigation__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        a {
+          display: flex;
+          align-items: center;
+          margin: 6px 0;
+        }
+        .number {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 18px;
+          font-size: 12px;
+        }
+        .line_separation {
+          width: 35px;
+          height: 2px;
+          margin: 0 12px;
+          background: #fff;
+        }
+        .title_menu {
+          margin: 4px 0;
+          font-size: 1.2rem;
+          font-weight: 300;
+        }
+      }
+    }
+    .footer {
+      .find__me {
+        display: flex;
+        align-items: center;
+
+        .profile__image {
+          width: 45px;
+          height: 45px;
+          border-radius: 45px;
+          overflow: hidden;
+          margin-right: 10px;
+          position: relative;
+          .img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+          }
+        }
+
+        .social__link {
+          border: 1px solid #333;
+          border-radius: 4px;
+          padding: 6px 10px;
+          margin: 8px;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+
+          .img {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            &_link {
+              position: relative;
+              width: 16px;
+              height: 16px;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 50% 50%;
+              }
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: 50% 50%;
+            }
+          }
+
+          .title__social__link {
+            margin: 1px 5px 0 5px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.secondary__information::-webkit-scrollbar {
+  width: 10px;
+  scrollbar-arrow-color: #fff;
+}
+.secondary__information::-webkit-scrollbar-track {
+  background: rgb(51, 51, 51);
+}
+.secondary__information::-webkit-scrollbar-thumb {
+  background: rgb(92, 92, 92);
+  border-radius: 20px;
+}
+.secondary__information::-webkit-scrollbar-button {
+  background: rgb(129, 129, 129);
+  height: 10px;
+  border-radius: 10px 10px 0 0;
+}
+.secondary__information {
+  overflow-y: scroll;
+  position: absolute;
+  right: 0;
+  width: 55%;
+  height: 100%;
+  padding-right: 20%;
+
+  .container {
+    width: 509px;
+    margin: auto;
+
+    .projects {
+      padding-top: 30px;
+      margin: 28px 0;
+      h3 {
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin-bottom: 18px;
+        color: #b1b1b1;
+      }
+      .projects__container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .project__card {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.267);
+        background: #202022;
+        padding: 22px;
+        cursor: pointer;
+        transition: transform 0.1s ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+          transition: transform 0.2s ease-in-out;
+        }
+        small {
+          font-size: 0.8rem;
+          margin-bottom: 6px;
+        }
+        h4 {
+          font-size: 2rem;
+          font-weight: 500;
+        }
+        p {
+          margin: 10px 0 18px 0;
+          line-height: 1.5em;
+        }
+        .stars {
+          display: flex;
+          align-items: center;
+          .img {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: 50% 50%;
+            }
+          }
+          small {
+            margin: 3px 0 0px 5px;
+          }
+        }
+      }
+    }
+    .other__links {
+      margin: 20px 0;
+
+      h3 {
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin-bottom: 18px;
+        color: #b1b1b1;
+      }
+      &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+        .other__links__card {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 260px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.267);
+          background: #202022;
+          padding: 22px;
+          cursor: pointer;
+          transition: transform 0.1s ease-in-out;
+
+          .other__links__card:hover {
+            transform: scale(1.1);
+            transition: transform 0.2s ease-in-out;
+          }
+
+          h6 {
+            font-size: 1.1rem;
+            font-weight: 500;
+          }
+          .header {
+            small {
+              display: block;
+              font-size: 1.1rem;
+            }
+          }
+          .footer {
+            h4 {
+              font-size: 1.8rem;
+              font-weight: 500;
+            }
+
+            .social__links {
+              margin-right: 10px;
+              margin-top: 10px;
+              padding: 6px 6px 6px 0;
+              display: flex;
+              width: fit-content;
+              .title__social__link {
+                margin-right: 10px;
+              }
+              .img {
+                position: relative;
+                width: 20px;
+                height: 20px;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  object-position: 50% 50%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
