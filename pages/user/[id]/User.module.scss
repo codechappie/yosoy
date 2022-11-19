@@ -243,7 +243,8 @@
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          height: 260px;
+          min-height: 260px;
+          height: auto;
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.267);
           background: #202022;
           padding: 22px;
@@ -834,7 +835,14 @@
     padding: 20px;
   }
 }
-
+@media screen and (max-width: 520px){
+  .other__links__container{
+    grid-template-columns: 1fr!important;
+    .other__links__card{
+      min-height: 200px!important;
+    }
+  }
+}
 @media screen and (max-width: 425px) {
   .container__fluid {
     width: 99%;
