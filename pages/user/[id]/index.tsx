@@ -5,10 +5,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 const index = ({ props }: any) => {
     let { username } = props;
+    let title = `YosoY - ${username}`
+    console.log(username)
     return (
-        <Layout>
+        <>
             <Head>
-                <title>YosoY {username}</title>
+                <title>{title}</title>
                 <meta name="description" content="YoSoY es una página en la que podrás crear una curriculim online." />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -18,14 +20,14 @@ const index = ({ props }: any) => {
                         <div className={style.header}>
                             <div className={style.presentacion}>
                                 <h1>Hola, Yo soy</h1>
-                                <h1>Angel Canales</h1>
+                                <h1>{username}</h1>
                                 <p>
                                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores fuga totam, odio <a
-                                        className="underlined" href="#">laboreullam</a>  fugiat
-                                    laborum saepe consequuntur <a className="underlined" href="#">consequatur</a> quaerat pariatur
+                                        className={style.underlined} href="#">laboreullam</a>  fugiat
+                                    laborum saepe consequuntur <a className={style.underlined} href="#">consequatur</a> quaerat pariatur
                                     voluptate quibusdam dolorem
                                     assumenda aperiam
-                                    quo <a className="underlined" href="#">impeditds</a> eaque iusto!
+                                    quo <a className={style.underlined} href="#">impeditds</a> eaque iusto!
                                 </p>
                             </div>
                             <div className={style.navigation__menu}>
@@ -65,7 +67,7 @@ const index = ({ props }: any) => {
                                             fill />
                                     </div>
                                 </Link>
-                                <a className={style.social__link}>
+                                <Link href="https://codechappie.com" className={style.social__link}>
                                     <div className={style.img}>
                                         <Image src="https://codechappie.github.io/blackandwhite/assets/icons/icons8_twitter_squared_1.svg" alt=""
                                             fill />
@@ -75,7 +77,7 @@ const index = ({ props }: any) => {
                                         <Image src="https://codechappie.github.io/blackandwhite/assets/icons/icons8_external_link_1.svg" alt=""
                                             fill />
                                     </div>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -142,7 +144,7 @@ const index = ({ props }: any) => {
                                     <div className={style.footer}>
                                         <h4>Lorem ipsum dolor sit.</h4>
                                         <div className={style.social__links}>
-                                            <div className={style.social__title__link}>Twitter</div>
+                                            <div className={style.title__social__link}>Twitter</div>
                                             <div className={style.img}>
                                                 <Image src="https://codechappie.github.io/blackandwhite/assets/icons/icons8_external_link_1.svg" alt="" fill />
                                             </div>
@@ -159,7 +161,7 @@ const index = ({ props }: any) => {
                                     <div className={style.footer}>
                                         <h4>Lorem ipsum dolor sit.</h4>
                                         <div className={style.social__links}>
-                                            <div className={style.social__title__link}>Facebook</div>
+                                            <div className={style.title__social__link}>Facebook</div>
                                             <div className={style.img}>
                                                 <Image src="https://codechappie.github.io/blackandwhite/assets/icons/icons8_external_link_1.svg" alt="" fill />
                                             </div>
@@ -174,19 +176,11 @@ const index = ({ props }: any) => {
                                     </div>
 
                                     <div className={style.footer}>
-                                        <h4>Lorem ipsum lorem loremd dolor sit.</h4>
+                                        <h4>Lorem ipsum dolor sit sadsa asdasd asdasd.</h4>
                                         <div className={style.social__links}>
-                                            <div className={style.social__links}>
-                                                <div className={style.title__social__link}>Twitter</div>
-                                                <div className={style.img}>
-                                                    <Image src="https://codechappie.github.io/blackandwhite/assets/icons/icons8_external_link_1.svg" alt="" fill />
-                                                </div>
-                                            </div>
-                                            <div className={style.social__links}>
-                                                <div className={style.title__social__link}>Twitter</div>
-                                                <div className={style.img}>
-                                                    <Image src="https://codechappie.github.io/blackandwhite/assets/icons/icons8_external_link_1.svg" alt="" fill />
-                                                </div>
+                                            <div className={style.title__social__link}>Facebook</div>
+                                            <div className={style.img}>
+                                                <Image src="https://codechappie.github.io/blackandwhite/assets/icons/icons8_external_link_1.svg" alt="" fill />
                                             </div>
                                         </div>
                                     </div>
@@ -194,45 +188,51 @@ const index = ({ props }: any) => {
                             </div>
 
                         </section >
-                        {/* <section className="audiovisual-content">
+                        <section className={style.audiovisual__content}>
                             <h3>Audiovisual</h3>
-                            <div className="audiovisual-content-container">
-                                <div className="audiovisual-card">
-                                    <div className="big-button">
-                                        <Image src="https://codechappie.github.io/blackandwhite/assets/icons/icons8_play.svg" alt="" fill />
+                            <div className={style.audiovisual__content__container}>
+                                <div className={style.audiovisual__card}>
+                                    <div className={style.big__button}>
+                                        <div className={style.img}>
+                                            <Image src="https://codechappie.github.io/blackandwhite/assets/icons/icons8_play.svg" alt="" fill />
+                                        </div>
                                     </div>
-                                    <div className="detail-card">
+                                    <div className={style.detail__card}>
                                         <h4>Lorem ipsum dolor sitlasw.</h4>
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                         <small>26 de Mayo 2020</small>
                                     </div>
                                 </div>
-                                <div className="audiovisual-card">
-                                    <div className="big-button">
-                                        <Image src="https://codechappie.github.io/blackandwhite/assets/icons/icons8_medium_volume.svg" alt="" fill />
+                                <div className={style.audiovisual__card}>
+                                    <div className={style.big__button}>
+                                        <div className={style.img}>
+                                            <Image src="https://codechappie.github.io/blackandwhite/assets/icons/icons8_medium_volume.svg" alt="" fill />
+                                        </div>
                                     </div>
-                                    <div className="detail-card">
-                                        <h4>Lorem ipsum dolor sitlasw.</h4>
+                                    <div className={style.detail__card}>
+                                        <h4>Lorem ipsum dolor si sdfskjflksnsd sdfsd tlasw.</h4>
                                         <p>Lorem ipsum dolor sit amet consectetur lorem sds sadipisicing elit.</p>
-                                        <p>26 de Mayo 2020</p>
+                                        <small>26 de Mayo 2020</small>
                                     </div>
                                 </div>
-                                <div className="audiovisual-card">
-                                    <div className="big-button">
-                                        <Image src="https://codechappie.github.io/blackandwhite/assets/icons/icons8_medium_volume.svg" alt="" fill />
+                                <div className={style.audiovisual__card}>
+                                    <div className={style.big__button}>
+                                        <div className={style.img}>
+                                            <Image src="https://codechappie.github.io/blackandwhite/assets/icons/icons8_medium_volume.svg" alt="" fill />
+                                        </div>
                                     </div>
-                                    <div className="detail-card">
+                                    <div className={style.detail__card}>
                                         <h4>Lorem ipsum dolor sitlasw.</h4>
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                         <small>26 de Mayo 2020</small>
                                     </div>
                                 </div>
                             </div>
-                        </section> */}
+                        </section>
                     </div >
                 </section >
             </main >
-        </Layout >
+        </>
     )
 }
 
@@ -244,7 +244,7 @@ export async function getServerSideProps(context: any) {
     if (booleanVal) {
 
         return {
-            props: { props: { username: "CodeChappie" } },
+            props: { props: { username: id } },
         };
     } else {
         return { props: {} };
