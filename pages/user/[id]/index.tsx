@@ -6,7 +6,6 @@ import Link from 'next/link';
 const index = ({ props }: any) => {
     let { username } = props;
     let title = `YosoY - ${username}`
-    console.log(username)
     return (
         <>
             <Head>
@@ -239,7 +238,6 @@ const index = ({ props }: any) => {
 
 export async function getServerSideProps(context: any) {
     let { id } = context.params;
-    console.log(id)
     let booleanVal = true;
     if (booleanVal) {
 

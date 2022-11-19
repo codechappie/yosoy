@@ -836,6 +836,9 @@
   }
 }
 @media screen and (max-width: 520px){
+  .body{
+    min-width: 500px;
+  }
   .other__links__container{
     grid-template-columns: 1fr!important;
     .other__links__card{

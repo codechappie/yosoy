@@ -34,7 +34,7 @@ class MyDocument extends Document {
           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
           <meta name="theme-color" content="#ffffff" />
         </Head>
-        <body className="theme__dark">
+        <body className="body theme__dark">
           <Main />
           <NextScript />
           {/* <Script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/languages/go.min.js" /> */}
